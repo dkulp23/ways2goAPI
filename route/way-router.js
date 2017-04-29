@@ -105,6 +105,12 @@ wayRouter.delete('/api/way/:wayID/wayerz/:wayerID', bearerAuth, function(req, re
     tempWay.wayerz.splice(tempWay.wayerz.indexOf(tempWayerProfile._id), 1);
     return tempWay.save();
   })
+  .then( way => {
+    return Way.findById(way._id)
+    .populate('startLocationID')
+    .populate('endLocationID')
+    .populate('wayerz');
+  })
   .then( way => res.json(way))
   .catch(next);
 });
