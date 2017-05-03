@@ -75,6 +75,13 @@ profileRouter.put('/api/profile', bearerAuth, jsonParser, upload.single('photo')
     reqKeys.push('photo');
   }
 
+  let socMediaProps = ['socialMedia.twitter', 'socialMedia.facebook', 'socialMedia.googlePlus', 'socialMedia.linkedIn'];
+
+  let socMediaCheck = socMediaProps.reduce(function(acc, ele) {
+    if (reqKeys.includes(ele)) acc.push(ele);
+    return acc;
+  }, []);
+
   if (reqKeys.includes('address')) {
     parseLocationGoogle(req.body.address)
     .then( geolocation => {
@@ -95,7 +102,8 @@ profileRouter.put('/api/profile', bearerAuth, jsonParser, upload.single('photo')
       if (profile[ele]) acc.push(ele);
       return acc;
     }, []);
-    if (reqCheck.length < 1) {
+
+    if (socMediaCheck.length < 1 && reqCheck.length < 1) {
       return next(createError(400, 'bad request'));
     }
     res.json(profile);
