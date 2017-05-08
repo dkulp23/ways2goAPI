@@ -497,4 +497,4 @@ _Without this wizardry, there would be no ways2go._
 ### **Anna Ulanova** - Full Stack Developer - [@annaul](https://github.com/annaul)
 ### **Darcy McCabe** - Full Stack Developer - [@darms](https://github.com/darms)
 ### **Remil Marzan** - Full Stack Developer - [@remilonwheels](https://github.com/remilonwheels)
-### **Dana Kulp** - Full Stack Developer - [@dkulp23](https://github.com/dkulp23)
+### ![photo](https://avatars2.githubusercontent.com/u/16858580?v=3&s=400) **Dana Kulp** - Full Stack Developer - [@dkulp23](https://github.com/dkulp23)
