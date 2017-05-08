@@ -10,7 +10,7 @@ const Review = require('../model/review.js');
 const profileSchema = Schema({
   profileID: { type: Schema.Types.ObjectId, required: true },
   displayName: { type: String, required: true, unique: true },
-  photo: { type: String },
+  photo: { type: String, default: 'https://s3-us-west-2.amazonaws.com/ways2go/Carpool-96.png' },
   fullName: { type: String },
   address: [{ type: Schema.Types.ObjectId, ref: 'location' }],
   bio: { type: String },
