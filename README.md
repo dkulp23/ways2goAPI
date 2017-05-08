@@ -494,7 +494,7 @@ _Without this wizardry, there would be no ways2go._
 ***
 # ABOUT US |  [top](#ways2go)
 ***
-### ![photo](https://avatars0.githubusercontent.com/u/21015160?v=3&s=200) **Anna Ulanova** - Full Stack Developer - [@annaul](https://github.com/annaul)
-### **Darcy McCabe** - Full Stack Developer - [@darms](https://github.com/darms) ![photo](https://avatars3.githubusercontent.com/u/7832609?v=3&s=200)
-### ![photo](https://avatars0.githubusercontent.com/u/23696208?v=3&s=200) **Remil Marzan** - Full Stack Developer - [@remilonwheels](https://github.com/remilonwheels)
-### **Dana Kulp** - Full Stack Developer - [@dkulp23](https://github.com/dkulp23) ![photo](https://avatars2.githubusercontent.com/u/16858580?v=3&s=200)
+### ![photo](https://avatars0.githubusercontent.com/u/21015160?v=3&s=100) **Anna Ulanova** - Full Stack Developer - [@annaul](https://github.com/annaul)
+### **Darcy McCabe** - Full Stack Developer - [@darms](https://github.com/darms) ![photo](https://avatars3.githubusercontent.com/u/7832609?v=3&s=100)
+### ![photo](https://avatars0.githubusercontent.com/u/23696208?v=3&s=100) **Remil Marzan** - Full Stack Developer - [@remilonwheels](https://github.com/remilonwheels)
+### **Dana Kulp** - Full Stack Developer - [@dkulp23](https://github.com/dkulp23) ![photo](https://avatars2.githubusercontent.com/u/16858580?v=3&s=100)
