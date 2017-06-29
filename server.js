@@ -19,7 +19,6 @@ const reviewRouter = require('./route/review-router.js');
 
 const errors = require('./lib/error-middleware.js');
 
-
 const PORT = process.env.PORT || 3000;
 const app = express();
 
@@ -36,8 +35,8 @@ app.use(reviewRouter);
 app.use(messageRouter);
 app.use(errors);
 
-const server = module.exports = app.listen(PORT, () => {
+const server = (module.exports = app.listen(PORT, () => {
   debug(`Server's up on PORT: ${PORT}`);
-});
+}));
 
 server.isRunning = true;

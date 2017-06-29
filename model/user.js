@@ -17,11 +17,8 @@ const userSchema = Schema({
   email: { type: mongoose.SchemaTypes.Email, unique: true },
   timeStamp: { type: Date, default: Date.now },
   findHash: { type: String, unique: true },
-  provider: { type: String },
-  facebookID: { type: String, unique: true, sparse: true }
+  provider: { type: String }
 });
-
-userSchema.index({username: 1, facebookID: 1}, {unique: true});
 
 userSchema.methods.generatePasswordHash = function(password) {
   debug('generatePasswordHash');
@@ -55,18 +52,17 @@ userSchema.methods.generateFindHash = function() {
   debug('generateFindHash');
 
   return new Promise((resolve, reject) => {
-
     _generateFindHash.call(this);
 
     function _generateFindHash() {
       this.findHash = crypto.randomBytes(32).toString('hex');
       this.save()
-      .then( () => {
-        resolve(this.findHash);
-      })
-      .catch( err => {
-        return reject(err);
-      });
+        .then(() => {
+          resolve(this.findHash);
+        })
+        .catch(err => {
+          return reject(err);
+        });
     }
   });
 };
@@ -76,8 +72,10 @@ userSchema.methods.generateToken = function() {
 
   return new Promise((resolve, reject) => {
     this.generateFindHash()
-    .then( findHash => resolve(jwt.sign({ token: findHash }, process.env.APP_SECRET)))
-    .catch( err => reject(err));
+      .then(findHash =>
+        resolve(jwt.sign({ token: findHash }, process.env.APP_SECRET))
+      )
+      .catch(err => reject(err));
   });
 };
 
